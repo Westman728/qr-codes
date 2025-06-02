@@ -1,5 +1,40 @@
-<h1>WiFi QR-Generator</h1>
-<div id="qr-canvas"></div>
-<button type="button" onclick="generateWiFiQR()">Generate WiFi QR</button>
-
+<h1 class="center">WiFi QR-Code Generator</h1>
+<div style="text-align: center;">
+    <div style="display: inline-block; text-align: left">
+    <input style="margin-top: 5px;" type="text" id="ssid" placeholder="Enter network name"/>
+    <br/>
+    <input style="margin-top: 10px" type="password" id="password" placeholder="Enter network password"/>
+    <button type="button" style="border: 0; background: white;" onclick="togglePassword()">👁️</button>
+    <br/>
+    <select style="margin-top: 10px;" id="security">
+        <option value="WPA">WPA/WPA2</option>
+        <option value="WEP">WEP</option>
+        <option value="nopass">No password</option>
+    </select>
+    <br/>
+    <label>
+        <input style="margin-top: 10px" type="checkbox" id="hidden"/> Hidden network
+    </label>
+    <br/>
+    <div style="text-align: center">
+        <button type="button" class="generate-btn" onclick="generateWiFiQR()">Generate QR Code</button>
+    </div>
+    </div>
+</div>
+<div id="qrcode" style="padding-top: 20px" align="center"></div>
+<div class="center">
+    <button type="button" class="download-btn" onclick="downloadQR()" id="download-btn">Download QR Code</button>
+</div>
+<script src="~/js/qrcode.js"></script>
 <script src="~/js/qr-generators.js"></script>
+<script>
+    function togglePassword() {
+        const passwordField = document.getElementById("password");
+        
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+</script>

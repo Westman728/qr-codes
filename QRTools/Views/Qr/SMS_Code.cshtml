@@ -1,1 +1,18 @@
-<h1>SMS QR-Generator</h1>
+<h1 class="center">SMS QR-Code Generator</h1>
+<div style="text-align: center;">
+    <div style="display: inline-block; text-align: left">
+        <input style="margin-top: 5px;" type="tel" id="phone" placeholder="Recipient phone number"/>
+        <br/>
+        <textarea id="message" placeholder="Message body" rows="4" cols="50" style="margin-top: 10px; resize: vertical"></textarea>
+        <br/>
+        <div style="text-align: center">
+            <button type="button" class="generate-btn" onclick="generateSmsQR()">Generate QR Code</button>
+        </div>
+    </div>
+</div>
+<div id="qrcode" style="padding-top: 20px" align="center"></div>
+<div class="center">
+    <button type="button" class="download-btn" onclick="downloadQR()" id="download-btn">Download QR Code</button>
+</div>
+<script src="~/js/qrcode.js"></script>
+<script src="~/js/qr-generators.js"></script>
