@@ -1,4 +1,6 @@
-<h1 class="center">QR-Code Generator</h1>
+<h1 class="center">QR-Code Generator
+    <button type="button" class="info-click" onclick="toggleInfo()">ℹ️</button>
+    </h1>
 <div class="center">
     <input type="text" id="qr-input" placeholder="Enter URL" />
     <br/>
@@ -8,5 +10,9 @@
 <div class="center">
     <button type="button" onclick="downloadQR()" id="download-btn" class="download-btn">Download QR Code</button>
 </div>
+<div id="info" class="info-box" style="display: none; margin-top: 10px">
+    📶 Generate a QR code that that redirects devices to the specified webpage.
+</div>
 <script src="~/js/qrcode.js"></script>
 <script src="~/js/qr-generators.js"></script>
+<script src="~/js/functions.js"></script>
