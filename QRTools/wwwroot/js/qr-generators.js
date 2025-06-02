@@ -2,7 +2,7 @@ function generateQrCode() {
     const inputText = document.getElementById("qr-input").value.trim();
 
     if (!inputText) {
-        !alert("Please enter a URL!");
+        !alert("A URL is required.");
         return;
     }
     if (inputText > 2000) {
