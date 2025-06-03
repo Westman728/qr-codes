@@ -1,0 +1,11 @@
+name: qr-codes
+services:
+  - name: web
+    source_dir: /
+    github:
+      repo: Westman728/qr-codes
+      branch: master
+    run_command: dotnet QRTools.dll
+    environment_slug: dotnet
+    instance_count: 1
+    instance_size_slug: basic-xxs

@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Content Include=".do\app.yaml" />
+    </ItemGroup>
+
 </Project>
