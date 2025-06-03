@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Email";
+}
+<h1 class="center">Email QR-Code Generator
+    <button type="button" class="info-click" onclick="toggleInfo()">ℹ️</button>
+    </h1>
+<div style="text-align: center;">
+    <div style="display: inline-block; text-align: left">
+        <input style="margin-top: 5px;" type="email" id="email" placeholder="Recipient email"/> *
+        <br/>
+        <input style="margin-top: 5px" type="text" id="subject" placeholder="Subject"/>
+        <br/>
+        <textarea id="msgBody" placeholder="Message body" rows="4" cols="50" style="margin-top: 5px; resize: vertical"></textarea>
+        <br/>
+        <div style="text-align: center">
+            <button type="button" class="generate-btn" onclick="generateEmailQR()">Generate QR Code</button>
+        </div>
+    </div>
+</div>
+<div id="qrcode" style="padding-top: 20px" align="center"></div>
+<div class="center">
+    <button type="button" class="download-btn" onclick="downloadQR()" id="download-btn">Download QR Code</button>
+</div>
+<div id="info" class="info-box" style="display: none; margin-top: 10px">
+    📧 Generate a QR code that that auto-fills an email.
+</div>
+<script src="~/js/qrcode.js"></script>
+<script src="~/js/qr-generators.js"></script>
+<script src="~/js/functions.js"></script>

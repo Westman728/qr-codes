@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "WiFi";
+}
+<h1 class="center">WiFi QR-Code Generator
+    <button type="button" class="info-click" onclick="toggleInfo()">ℹ️</button>
+</h1>
+<div style="text-align: center;">
+    <div style="display: inline-block; text-align: left">
+        <input style="margin-top: 5px;" type="text" id="ssid" placeholder="Network name"/> *
+        <br/>
+        <input style="margin-top: 5px" type="password" id="password" placeholder="Network password"/>
+        <button type="button" style="border: 0; background: white;" onclick="togglePassword()">👁️</button>
+        <br/>
+        <select style="margin-top: 5px;" id="security">
+            <option value="WPA">WPA/WPA2</option>
+            <option value="WEP">WEP</option>
+            <option value="nopass">No password</option>
+        </select>
+        <br/>
+        <label>
+            <input style="margin-top: 5px" type="checkbox" id="hidden"/> Hidden network
+        </label>
+        <br/>
+        <div style="text-align: center">
+            <button type="button" class="generate-btn" onclick="generateWiFiQR()">Generate QR Code</button>
+        </div>
+    </div>
+</div>
+<div id="qrcode" style="padding-top: 20px" align="center"></div>
+<div class="center">
+    <button type="button" class="download-btn" onclick="downloadQR()" id="download-btn">Download QR Code</button>
+</div>
+<div id="info" class="info-box" style="display: none; margin-top: 10px">
+    🛜 Generate a QR code that automatically connects devices to the specified WiFi network.
+</div>
+<script src="~/js/qrcode.js"></script>
+<script src="~/js/qr-generators.js"></script>
+<script src="~/js/functions.js"></script>
+<script>
+    function togglePassword() {
+        const passwordField = document.getElementById("password");
+        
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+</script>
