@@ -33,7 +33,7 @@ body {
 
 nav a:hover {
   text-decoration: underline;
-  text-decoration-color: black;
+  text-decoration-color: white;
 }
 
 .center {
@@ -130,4 +130,40 @@ nav a:hover {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  background: linear-gradient(135deg, #4B006E, #6B2C87) !important;
+  border: none !important;
+  box-shadow: 0 0 20px rgba(75, 0, 110, 0.4) !important;
+  filter: drop-shadow(0 4px 8px rgba(75, 0, 110, 0.2));
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.navbar-brand:hover {
+  color: #f8f9fa !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f8f9fa !important;
+  transform: translateY(-2px);
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
 }
