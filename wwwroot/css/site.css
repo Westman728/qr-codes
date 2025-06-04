@@ -31,11 +31,6 @@ body {
   text-align: start;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  text-decoration-color: white;
-}
-
 .center {
   text-align: center;
 }
@@ -158,6 +153,8 @@ nav a:hover {
 .nav-link:hover {
   color: #f8f9fa !important;
   transform: translateY(-2px);
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 .navbar-toggler {
